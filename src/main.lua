@@ -116,7 +116,6 @@ end
 
 --All key pressing AND button pressing gets relegated to this function
 function love.keypressed( key, scancode, isrepeat )
-  print("Got key: " .. key)
 	if  key ~= "(-)" then
     handleNumberAndOperatorInputs(key, scancode, isrepeat)
   elseif calcDispStr ~= "" then
@@ -147,7 +146,6 @@ function love.mousereleased(x, y, button, isTouch)
   if button == 1 then --pressed mouse 1
     if currentButtonPressedIndex ~= 0 then
       local v = buttonTable[currentButtonPressedIndex]
-      print(type(v))
       if x > (v[1]*windowX) and y > (v[2]*windowY) and x < ((v[1]+v[3])*windowX) and y < ((v[2]+v[4])*windowY) then
         love.keypressed(v[6], _, _)
       end
