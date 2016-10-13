@@ -58,7 +58,8 @@ local buttonTable = {
   {0.210, 0.280, 0.18, 0.18, 0.01, "8"},
   {0.395, 0.280, 0.18, 0.18, 0.01, "9"},
   {0.025, 0.835, 0.18, 0.15, 0.01, "(-)"},
-  {0.210, 0.835, 0.365, 0.15, 0.01, "0"},
+  {0.210, 0.835, 0.18, 0.15, 0.01, "0"},
+  {0.395, 0.835, 0.18, 0.15, 0.01, "."},
   {0.620, 0.280, 0.177, 0.233, 0.01, "/"},
   {0.803, 0.280, 0.177, 0.233, 0.01, "*"},
   {0.620, 0.520, 0.177, 0.233, 0.01, "+"},
@@ -79,7 +80,6 @@ end
 
 --CALLBACK
 function love.update()
-	--filler comment
 end
 
 --CALLBACK
@@ -119,7 +119,11 @@ function love.keypressed( key, scancode, isrepeat )
 	if  key ~= "(-)" then
     handleNumberAndOperatorInputs(key, scancode, isrepeat)
   elseif calcDispStr ~= "" then
-    calcDispStr = tostring(tonumber(calcDispStr) * -1)
+    if calcDispStr:sub(1, 1) == "-" then
+      calcDispStr = calcDispStr:sub(2)
+    else
+      calcDispStr = "-"..calcDispStr
+    end
     calcDispText:set(calcDispStr)
   end
 end
