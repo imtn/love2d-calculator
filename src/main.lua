@@ -221,6 +221,7 @@ function handleNumberAndOperatorInputs(key, scancode, isrepeat)
     else --opDispStr == ""
       numOnHold = tonumber(calcDispStr)
       operatorJustSelected = true
+      hasDecimal = false
       opDispStr = key
       opDispText:set(opDispStr)
 		end
