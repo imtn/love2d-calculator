@@ -43,7 +43,7 @@ local multiply = function(a, b)
 end
 local divide = function(a, b) return a / b end
 
---List of lists. Each list is associated (conceptually, not actually codewise) with a button. Each  list has six elements, which are in order: {x position, y position,  width, height, radius of the corners of the button's rounded rectangles, string to be printed on button}
+--List of lists. Each list is associated (conceptually, not actually codewise) with a button. Each list has six elements, which are in order: {x position, y position,  width, height, radius of the corners of the button's rounded rectangles, string to be printed on button}
 --Draw these like love.graphics.rectangle("fill", windowX*v[1], windowY*v[2], windowX*v[3], windowY*v[4], windowX*v[5])
 --Set the color as black for text, then love.graphics.print(" "..v[6], windowX*v[1], windowY*v[2])
 --Where you are looping through everything in buttonTable and v is each inner table
