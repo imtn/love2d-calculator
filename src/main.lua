@@ -79,6 +79,13 @@ function love.load()
 end	
 
 --CALLBACK
+function love.resize(w, h)
+  windowX = w
+  windowY = h
+  print("new size is "..w.." by "..h)
+end
+
+--CALLBACK
 function love.update()
 end
 
@@ -100,7 +107,7 @@ function love.draw()
     love.graphics.rectangle("fill", windowX*v[1], windowY*v[2], windowX*v[3], windowY*v[4], windowX*v[5])
     love.graphics.setFont(buttonTextFont)
     love.graphics.setColor(blackColor)
-    love.graphics.print(" "..tostring(v[6]), windowX*v[1], windowY*v[2])
+    love.graphics.print(tostring(v[6]), windowX*v[1], windowY*v[2])
   end
   
   -- Draws the number display area
