@@ -8,6 +8,6 @@ function love.conf(t)
   t.window.minwidth = 400
   t.window.minheight = 500
 
-	t.console = true
+	--t.console = true
 
 end

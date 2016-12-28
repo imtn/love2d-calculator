@@ -82,7 +82,6 @@ end
 function love.resize(w, h)
   windowX = w
   windowY = h
-  print("new size is "..w.." by "..h)
 end
 
 --CALLBACK
