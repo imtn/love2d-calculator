@@ -7,7 +7,7 @@ local numOnHold = 0  -- After pressing +, -, *, /, =, previous number is kept in
 local operatorJustSelected = false -- whether or not the most recent button press by a user, was on an operator
 local justCalculated = false --Whether or not the user has just pressed enter or return to calculate.
 local hasDecimal = false --Whether or not the calcDispStr number has a decimal point. If it does, we can't add any more decimal points
-local maxCalcDispLen = 20 --If I didn't have this, the user could just keep typing numbers forever. This is the max, pleasant-to-see, digits that the calculator will display.
+local maxCalcDispLen = 18 --If I didn't have this, the user could just keep typing numbers forever. This is the max, pleasant-to-see, digits that the calculator will display.
 local currentButtonPressedIndex = 0 -- The index in buttonTable of whatever button is currently being held down. 0 means nothing is pressed right now because lua arrays start at 1
 
 --FONTS
